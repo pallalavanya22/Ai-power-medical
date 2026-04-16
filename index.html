@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Diagnosis Aid</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Medical Diagnosis Aid</h1>
+            <p>Enter symptoms in your language (e.g., Telugu). Get English translation & AI analysis.</p>
+            <div class="disclaimer">⚠️ Not medical advice - consult doctor!</div>
+        </header>
+
+        <div id="welcome" class="welcome-section">
+            <h2>👋 Welcome! How can we help you today?</h2>
+            <p>Speak or type your symptoms in any Indian language. Upload prescriptions/images for OCR. Get personalized AI advice tailored for Indian context.</p>
+        </div>
+
+        <form id="symptomForm">
+            <div class="input-group">
+                <label for="patient_name">Name:</label>
+                <input id="patient_name" placeholder="Patient name" />
+            </div>
+            <div class="input-group">
+                <label for="patient_age">Age:</label>
+                <input id="patient_age" type="number" min="0" placeholder="Age" />
+            </div>
+            <div class="input-group">
+                <label for="patient_place">Native place:</label>
+                <input id="patient_place" placeholder="Native place" />
+            </div>
+            <div class="input-group">
+                <label for="patient_phone">Phone number:</label>
+                <input id="patient_phone" placeholder="Phone" />
+            </div>
+            <div class="input-group">
+                <label for="patient_lang">Native language:</label>
+                <input id="patient_lang" placeholder="e.g., Hindi" />
+            </div>
+            <div class="input-group speak-section">
+                <label for="symptoms">Symptoms:</label>
+                <textarea id="symptoms" placeholder="e.g., నా కడుపు నొప్పి ఉంది (Telugu) or Stomach pain. Long descriptions OK."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="source_lang">Language:</label>
+                <select id="source_lang">
+                    <option value="auto">Auto-detect</option>
+                    <option value="te">Telugu</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ta">Tamil</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="document">Upload document / image:</label>
+                <input type="file" id="document" accept="image/*,.pdf" multiple />
+                <button type="button" id="extractBtn" class="extract-btn">Extract text</button>
+            </div>
+            <button type="button" id="speak-btn" class="voice-btn">🎤 Speak</button>
+            <button type="submit" id="submitBtn">Analyze</button>
+        </form>
+
+        <div id="results" class="results hidden">
+            <h2>Your AI Medical Analysis:</h2>
+            <div id="translated"></div>
+            <div id="analysis"></div>
+            <button type="button" id="backBtn" class="back-btn">← Back to Form</button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
