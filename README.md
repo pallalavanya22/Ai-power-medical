@@ -1,3 +1,7 @@
+# GET THE PROJECT EXPLORE VIDEO:
+# https://github.com/user-attachments/assets/4091aa44-ea99-497d-8f31-f9c0b873d77c
+
+
 # 🏥 AI Medical Diagnosis Aid - Multilingual Symptom Analyzer
 
 A multilingual web application that accepts symptom descriptions in regional Indian languages (or any language), translates them to English, and uses Google's Gemini AI to provide a preliminary health analysis.
