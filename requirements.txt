@@ -1,9 +1,10 @@
 gunicorn
 Flask==3.0.3
-google-generativeai==0.8.3
-googletrans==4.0.0-rc1
-langdetect==1.0.9
 python-dotenv==1.0.1
+langdetect==1.0.9
 pytesseract==0.3.13
 Pillow==10.4.0
 pdf2image==1.16.3
+deep-translator
+openai
+tenacity
